@@ -348,3 +348,64 @@ p36.append(Vector((math.radians(48.489), math.radians(158.011), math.radians(-21
 p36.append(Vector((-0.2381, -1.1318, 2.4473)))
 
 single_hair(first_closed, first_simple, p34, p35, p36)
+
+# Left
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
+
+p37 = []
+p37.append(Vector((0.0667, 0.4420, 0.0200)))
+p37.append(Vector((-0.0455, 0.4020, -0.0995)))
+p37.append(Vector((-0.0238, -1.2097, 1.2622)))
+
+p38 = []
+p38.append(Vector((0.4460, -2.6228, -1.5982)))
+p38.append(Vector((1.3015, -1.7020, -2.4903)))
+p38.append(Vector((1.7387, -1.7911, -2.2080)))
+
+p39 = []
+p39.append(Vector((0.9777, -0.4192, -0.3946)))
+p39.append(Vector((math.radians(19.3876), math.radians(136.488), math.radians(447.84))))
+p39.append(Vector((-0.2130, -1.0463, 2.3889)))
+
+single_hair(first_closed, first_simple, p37, p38, p39)
+
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
+
+p40 = []
+p40.append(Vector((0.2298, 0.7032, 0.4218)))
+p40.append(Vector((0.1375, 0.5391, 0.3184)))
+p40.append(Vector((-0.2850, -1.2560, 0.3807)))
+
+p41 = []
+p41.append(Vector((0.5712, -2.2586, -1.7462)))
+p41.append(Vector((0.9980, -2.2803, -2.1546)))
+p41.append(Vector((1.3912, -1.4322, -2.3540)))
+
+p42 = []
+p42.append(Vector((0.6926, -0.3673, -0.3712)))
+p42.append(Vector((math.radians(32.9117), math.radians(152.807), math.radians(457.159))))
+p42.append(Vector((-0.5528, -0.8084, 2.3493)))
+
+single_hair(first_closed, first_simple, p40, p41, p42)
+
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
+p43 = []
+p43.append(Vector((0.2607, 0.8334, 0.2688)))
+p43.append(Vector((0.1351, 0.8216, 0.1329)))
+p43.append(Vector((-0.4874, -0.6006, 0.9036)))
+
+p44 = []
+p44.append(Vector((0.6244, -1.9791, -1.0514)))
+p44.append(Vector((1.2673, -1.7254, -2.2090)))
+p44.append(Vector((1.7044, -1.8145, -1.9267)))
+
+p45 = []
+p45.append(Vector((0.7509, -0.4244, -0.3047)))
+p45.append(Vector((math.radians(43.8763), math.radians(147.565), math.radians(439.213))))
+p45.append(Vector((-0.6615, -0.6697, 2.3049)))
+
+single_hair(first_closed, first_simple, p43, p44, p45)
+
+# Right
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
+
