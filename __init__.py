@@ -29,7 +29,7 @@ bpy.context.scene.cursor_location = (0.0, 0.0, 0.0)
 
 # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
 
-def basic_closed_curve():
+def basic_closed_curve(p0, p1, p2, p3):
     # Create curve and cache reference.
     ops.curve.primitive_bezier_circle_add(enter_editmode=False)
     curve = context.active_object
@@ -42,24 +42,24 @@ def basic_closed_curve():
         bez_point.handle_right_type = 'FREE'   
 
     # Left point.
-    bez_points[0].co = Vector((0, -0.45, 0.0))
-    bez_points[0].handle_left = Vector((-0.55, -0.45, 0.0)
-    bez_points[0].handle_right = Vector((0.55, -0.45, 0.0))
+    bez_points[0].co = p0[0]
+    bez_points[0].handle_left = p0[1]
+    bez_points[0].handle_right = p0[2]
 
     # Top-middle point.
-    bez_points[1].co = Vector((1.0, 0.0, 0.0))
-    bez_points[1].handle_left = Vector((1.0, -0.18, 0.0))
-    bez_points[1].handle_right = Vector((1.0, 0.18, 0.0))
+    bez_points[1].co = p1[0]
+    bez_points[1].handle_left = p1[1]
+    bez_points[1].handle_right = p1[2]
 
     # Right point.
-    bez_points[2].co = Vector((0, 0.45, 0.0))
-    bez_points[2].handle_left = Vector((0.55, 0.45, 0.0))
-    bez_points[2].handle_right = Vector((-0.55, 0.45, 0.0))
+    bez_points[2].co = p2[0]
+    bez_points[2].handle_left = p2[1]
+    bez_points[2].handle_right = p2[2]
 
     # Bottom point.
-    bez_points[3].co = Vector((-1.0, 0.0, 0.0))
-    bez_points[3].handle_left = Vector((-1.0, 0.18, 0.0))
-    bez_points[3].handle_right = Vector((-1.0, -0.18, 0.0))
+    bez_points[3].co = p3[0]
+    bez_points[3].handle_left = p3[1]
+    bez_points[3].handle_right = p3[2]
     
     return curve.name
 
@@ -103,18 +103,38 @@ def single_hair(closed, simple):
 
     # First point.
     bez_points[0].co = Vector((0.0, 0.0, 0.0))
-    bez_points[0].handle_left = Vector((0.0, 0.0, 0.0))
+    bez_points[0].handle_left = Vector((0.0, 0.5, 0.0))
     bez_points[0].handle_right = Vector((0.0, -0.5, 0.0))
 
     # Second point.
     bez_points[1].co = Vector((0.0, -2.0, 0.0))
     bez_points[1].handle_left = Vector((0.0, -1.0, 0.0))
-    bez_points[1].handle_right = Vector((0.0, -0.0, 0.0))
+    bez_points[1].handle_right = Vector((0.0, -3.0, 0.0))
     
     # Shape
     curve.data.bevel_object = bpy.data.objects[closed]
     curve.data.taper_object = bpy.data.objects[simple]
 
-first_closed = basic_closed_curve()
+p0 = []
+p0.append(Vector((0, -0.45, 0.0)))
+p0.append(Vector((-0.55, -0.45, 0.0)))
+p0.append(Vector((0.55, -0.45, 0.0)))
+
+p1 = []
+p1.append(Vector((1.0, 0.0, 0.0)))
+p1.append(Vector((1.0, -0.18, 0.0)))
+p1.append(Vector((1.0, 0.18, 0.0)))
+
+p2 = []
+p2.append(Vector((0, 0.45, 0.0)))
+p2.append(Vector((0.55, 0.45, 0.0)))
+p2.append(Vector((-0.55, 0.45, 0.0)))
+
+p3 = []
+p3.append(Vector((-1.0, 0.0, 0.0)))
+p3.append(Vector((-1.0, 0.18, 0.0)))
+p3.append(Vector((-1.0, -0.18, 0.0)))
+
+first_closed = basic_closed_curve(p0, p1, p2, p3)
 first_simple = basic_simple_curve()
 single_hair(first_closed, first_simple)
