@@ -65,7 +65,7 @@ def basic_closed_curve(p0, p1, p2, p3):
 
 # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
 
-def basic_simple_curve():
+def basic_simple_curve(p0, p1):
     ops.curve.primitive_bezier_curve_add(enter_editmode=False)
     curve = context.active_object
     curve.name = 'Basic Simple Curve'
@@ -77,14 +77,14 @@ def basic_simple_curve():
         bez_point.handle_right_type = 'FREE'   
 
     # First point.
-    bez_points[0].co = Vector((-1.0, 0.0, 0.0))
-    bez_points[0].handle_left = Vector((1.6, -0.34, 0.0))
-    bez_points[0].handle_right = Vector((-0.5, 0.28, 0.0))
+    bez_points[0].co = p0[1]
+    bez_points[0].handle_left = p0[0]
+    bez_points[0].handle_right = p0[2]
 
     # Second point.
-    bez_points[1].co = Vector((1.0, 0.0, 0.0))
-    bez_points[1].handle_left = Vector((0.35, 0.35, 0.0))
-    bez_points[1].handle_right = Vector((1.99, -0.17, 0.0))
+    bez_points[1].co = p1[1]
+    bez_points[1].handle_left = p1[0]
+    bez_points[1].handle_right = p1[2]
     
     return curve.name
 
@@ -136,5 +136,17 @@ p3.append(Vector((-1.0, 0.18, 0.0)))
 p3.append(Vector((-1.0, -0.18, 0.0)))
 
 first_closed = basic_closed_curve(p0, p1, p2, p3)
-first_simple = basic_simple_curve()
+
+p4 = []
+p4.append(Vector((1.6000, -0.3400, 0.0000)))
+p4.append(Vector((-1.0000, 0.0000, 0.0000)))
+p4.append(Vector((-0.5000, 0.2800, 0.0000)))
+
+p5 = []
+p5.append(Vector((0.3500, 0.3500, 0.0000)))
+p5.append(Vector((1.0000, 0.0000, 0.0000)))
+p5.append(Vector((1.9900, -0.1700, 0.0000)))
+
+first_simple = basic_simple_curve(p4, p5)
+
 single_hair(first_closed, first_simple)
