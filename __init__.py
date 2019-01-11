@@ -20,6 +20,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>
 
 import bpy
+import math
 from bpy import context, data, ops
 from mathutils import Euler, Matrix, Quaternion, Vector
 
@@ -115,6 +116,7 @@ def single_hair(closed, simple, p0, p1, p3):
     curve.data.bevel_object = bpy.data.objects[closed]
     curve.data.taper_object = bpy.data.objects[simple]
     
+    # Transform
     bpy.context.scene.objects.active.scale = p3[0]
     bpy.context.scene.objects.active.rotation_euler = p3[1]
     bpy.context.scene.objects.active.location = p3[2]
@@ -206,7 +208,7 @@ p13.append(Vector((0.4267, -1.6870, -1.9636)))
 
 p14 = []
 p14.append(Vector((0.7346, -0.3922, -0.3078)))
-p14.append(Vector((16, 2.4886, -3.9200)))
+p14.append(Vector((math.radians(27.5962), math.radians(142.589), math.radians(-224.597))))
 p14.append(Vector((-0.0715, -1.0689, 2.4231)))
 
 
