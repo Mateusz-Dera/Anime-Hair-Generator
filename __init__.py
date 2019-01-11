@@ -43,7 +43,7 @@ def basic_closed_curve():
 
     # Left point.
     bez_points[0].co = Vector((0, -0.45, 0.0))
-    bez_points[0].handle_left = Vector((-0.55, -0.45, 0.0))
+    bez_points[0].handle_left = Vector((-0.55, -0.45, 0.0)
     bez_points[0].handle_right = Vector((0.55, -0.45, 0.0))
 
     # Top-middle point.
