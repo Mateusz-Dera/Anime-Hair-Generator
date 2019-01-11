@@ -42,23 +42,23 @@ def basic_closed_curve(p0, p1, p2, p3):
         bez_point.handle_right_type = 'FREE'   
 
     # Left point.
-    bez_points[0].co = p0[0]
-    bez_points[0].handle_left = p0[1]
+    bez_points[0].co = p0[1]
+    bez_points[0].handle_left = p0[0]
     bez_points[0].handle_right = p0[2]
 
     # Top-middle point.
-    bez_points[1].co = p1[0]
-    bez_points[1].handle_left = p1[1]
+    bez_points[1].co = p1[1]
+    bez_points[1].handle_left = p1[0]
     bez_points[1].handle_right = p1[2]
 
     # Right point.
-    bez_points[2].co = p2[0]
-    bez_points[2].handle_left = p2[1]
+    bez_points[2].co = p2[1]
+    bez_points[2].handle_left = p2[0]
     bez_points[2].handle_right = p2[2]
 
     # Bottom point.
-    bez_points[3].co = p3[0]
-    bez_points[3].handle_left = p3[1]
+    bez_points[3].co = p3[1]
+    bez_points[3].handle_left = p3[0]
     bez_points[3].handle_right = p3[2]
     
     return curve.name
@@ -116,24 +116,24 @@ def single_hair(closed, simple):
     curve.data.taper_object = bpy.data.objects[simple]
 
 p0 = []
-p0.append(Vector((0, -0.45, 0.0)))
-p0.append(Vector((-0.55, -0.45, 0.0)))
-p0.append(Vector((0.55, -0.45, 0.0)))
+p0.append(Vector((-0.5500, -0.4500, 0.0000)))
+p0.append(Vector((0.0000, -0.4500, 0.0000)))
+p0.append(Vector((0.5500, -0.4500, 0.0000)))
 
 p1 = []
-p1.append(Vector((1.0, 0.0, 0.0)))
-p1.append(Vector((1.0, -0.18, 0.0)))
-p1.append(Vector((1.0, 0.18, 0.0)))
+p1.append(Vector((1.0000, -0.1800, 0.0000)))
+p1.append(Vector((1.0000, 0.0000, 0.0000)))
+p1.append(Vector((0.8198, 0.2332, 0.0000)))
 
 p2 = []
-p2.append(Vector((0, 0.45, 0.0)))
-p2.append(Vector((0.55, 0.45, 0.0)))
-p2.append(Vector((-0.55, 0.45, 0.0)))
+p2.append(Vector((0.6908, 0.6175, 0.0000)))
+p2.append(Vector((-0.0639, 0.5629, 0.0000)))
+p2.append(Vector((-0.2992, 0.5264, 0.0000)))
 
 p3 = []
-p3.append(Vector((-1.0, 0.0, 0.0)))
-p3.append(Vector((-1.0, 0.18, 0.0)))
-p3.append(Vector((-1.0, -0.18, 0.0)))
+p3.append(Vector((-0.9409, 0.2253, 0.0000)))
+p3.append(Vector((-1.0000, 0.0000, 0.0000)))
+p3.append(Vector((-1.0000, -0.1800, 0.000)))
 
 first_closed = basic_closed_curve(p0, p1, p2, p3)
 
