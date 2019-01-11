@@ -115,6 +115,9 @@ def single_hair(closed, simple, p0, p1, p3):
     curve.data.bevel_object = bpy.data.objects[closed]
     curve.data.taper_object = bpy.data.objects[simple]
     
+    bpy.context.scene.objects.active.scale = p3[0]
+    bpy.context.scene.objects.active.rotation_euler = p3[1]
+    bpy.context.scene.objects.active.location = p3[2]
     
 
 # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
@@ -192,19 +195,20 @@ second_simple = basic_simple_curve('02', p10, p11)
 # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
 
 p12 = []
-p12.append(Vector((-0.0413, -0.5441, -0.0555)))
-p12.append(Vector((0.2038, 0.3199, -0.3361)))
-p12.append(Vector((-0.4124, -1.1984, 0.8252)))
+p12.append(Vector((0.1245, 0.2037, 0.0916)))
+p12.append(Vector((0.0124, 0.1637, -0.0280)))
+p12.append(Vector((0.2630, -0.8983, 0.3541)))
 
 p13 = []
-p13.append(Vector((-0.1608, -2.5737, -2.0292)))
-p13.append(Vector((0.9169, -3.7260, -2.9079)))
-p13.append(Vector((0.2441, -1.7120, 0.3762)))
+p13.append(Vector((0.1858, -2.2267, -0.9604)))
+p13.append(Vector((1.0884, -2.2705, -3.0047)))
+p13.append(Vector((0.4267, -1.6870, -1.9636)))
 
 p14 = []
-p14.append(Vector((-0.5161, -0.3922, -0.3078)))
-p14.append(Vector((0.7519, 3.0676, -3.5691)))
-p14.append(Vector((-0.0321, -1.0437, 2.4477)))
+p14.append(Vector((0.7346, -0.3922, -0.3078)))
+p14.append(Vector((16, 2.4886, -3.9200)))
+p14.append(Vector((-0.0715, -1.0689, 2.4231)))
+
 
 single_hair(first_closed, first_simple, p12, p13, p14)
 
