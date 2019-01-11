@@ -29,11 +29,11 @@ bpy.context.scene.cursor_location = (0.0, 0.0, 0.0)
 
 # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
 
-def basic_closed_curve(p0, p1, p2, p3):
+def basic_closed_curve(name, p0, p1, p2, p3):
     # Create curve and cache reference.
     ops.curve.primitive_bezier_circle_add(enter_editmode=False)
     curve = context.active_object
-    curve.name = 'Basic Closed Curve'
+    curve.name = 'Basic Closed Curve' + name
     bez_points = curve.data.splines[0].bezier_points
 
     # Set handles to desired handle type.
@@ -65,10 +65,10 @@ def basic_closed_curve(p0, p1, p2, p3):
 
 # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
 
-def basic_simple_curve(p0, p1):
+def basic_simple_curve(name, p0, p1):
     ops.curve.primitive_bezier_curve_add(enter_editmode=False)
     curve = context.active_object
-    curve.name = 'Basic Simple Curve'
+    curve.name = 'Basic Simple Curve' + name
     bez_points = curve.data.splines[0].bezier_points
 
     # Set handles to desired handle type.
@@ -137,7 +137,7 @@ p3.append(Vector((-0.9409, 0.2253, 0.0000)))
 p3.append(Vector((-1.0000, 0.0000, 0.0000)))
 p3.append(Vector((-1.0000, -0.1800, 0.000)))
 
-first_closed = basic_closed_curve(p0, p1, p2, p3)
+first_closed = basic_closed_curve('01', p0, p1, p2, p3)
 
 p4 = []
 p4.append(Vector((1.6000, -0.3400, 0.0000)))
@@ -149,7 +149,7 @@ p5.append(Vector((0.3500, 0.3500, 0.0000)))
 p5.append(Vector((1.0000, 0.0000, 0.0000)))
 p5.append(Vector((1.9900, -0.1700, 0.0000)))
 
-first_simple = basic_simple_curve(p4, p5)
+first_simple = basic_simple_curve('01', p4, p5)
 
 # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
 
@@ -173,6 +173,21 @@ p9.append(Vector((-0.8818, 0.0084, -0.0174)))
 p9.append(Vector((-1.0000, -0.2153, -0.0174)))
 p9.append(Vector((-1.0000, -0.3953, -0.0174)))
 
-second_closed = basic_closed_curve(p6, p7, p8, p9)
+second_closed = basic_closed_curve('02', p6, p7, p8, p9)
+
+p10 = []
+p10.append(Vector((1.6000, -0.3400, 0.0000)))
+p10.append(Vector((-1.0000, 0.0000, 0.0000)))
+p10.append(Vector((-0.5000, 0.2800, 0.0000)))
+
+p11 = []
+p11.append(Vector((0.5389, 1.4427, 0.0000)))
+p11.append(Vector((1.0000, 0.0000, 0.0000)))
+p11.append(Vector((1.9900, -0.1700, 0.0000)))
+
+second_simple = basic_simple_curve('02', p10, p11)
+
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
 
 single_hair(first_closed, first_simple)
+single_hair(second_closed, second_simple)
