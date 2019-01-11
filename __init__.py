@@ -115,6 +115,8 @@ def single_hair(closed, simple):
     curve.data.bevel_object = bpy.data.objects[closed]
     curve.data.taper_object = bpy.data.objects[simple]
 
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
+
 p0 = []
 p0.append(Vector((-0.5500, -0.4500, 0.0000)))
 p0.append(Vector((0.0000, -0.4500, 0.0000)))
@@ -148,5 +150,29 @@ p5.append(Vector((1.0000, 0.0000, 0.0000)))
 p5.append(Vector((1.9900, -0.1700, 0.0000)))
 
 first_simple = basic_simple_curve(p4, p5)
+
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
+
+p6 = []
+p6.append(Vector((-0.5500, 0.0082, -0.0174)))
+p6.append(Vector((0.0000, 0.0082, -0.0174)))
+p6.append(Vector((0.5500, 0.0082, -0.0174)))
+
+p7 = []
+p7.append(Vector((1.0000, -0.1800, -0.0174)))
+p7.append(Vector((1.0000, 0.0000, -0.0174)))
+p7.append(Vector((0.8455, 0.3240, -0.0174)))
+
+p8 = []
+p8.append(Vector((0.0944, 0.5268, -0.0174)))
+p8.append(Vector((-0.0902, 0.4995, -0.0174)))
+p8.append(Vector((-0.3255, 0.4631, -0.0174)))
+
+p9 = []
+p9.append(Vector((-0.8818, 0.0084, -0.0174)))
+p9.append(Vector((-1.0000, -0.2153, -0.0174)))
+p9.append(Vector((-1.0000, -0.3953, -0.0174)))
+
+second_closed = basic_closed_curve(p6, p7, p8, p9)
 
 single_hair(first_closed, first_simple)
