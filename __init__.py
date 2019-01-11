@@ -90,7 +90,7 @@ def basic_simple_curve(name, p0, p1):
 
 # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
 
-def single_hair(closed, simple):
+def single_hair(closed, simple, p0, p1, p3):
     ops.curve.primitive_bezier_curve_add(enter_editmode=False)
     curve = context.active_object
     curve.name = 'First Type'
@@ -102,18 +102,20 @@ def single_hair(closed, simple):
         bez_point.handle_right_type = 'FREE'   
 
     # First point.
-    bez_points[0].co = Vector((0.0, 0.0, 0.0))
-    bez_points[0].handle_left = Vector((0.0, 0.5, 0.0))
-    bez_points[0].handle_right = Vector((0.0, -0.5, 0.0))
+    bez_points[0].co = p0[1]
+    bez_points[0].handle_left = p0[0]
+    bez_points[0].handle_right = p0[2]
 
     # Second point.
-    bez_points[1].co = Vector((0.0, -2.0, 0.0))
-    bez_points[1].handle_left = Vector((0.0, -1.0, 0.0))
-    bez_points[1].handle_right = Vector((0.0, -3.0, 0.0))
+    bez_points[1].co = p1[1]
+    bez_points[1].handle_left = p1[0]
+    bez_points[1].handle_right = p1[2]
     
     # Shape
     curve.data.bevel_object = bpy.data.objects[closed]
     curve.data.taper_object = bpy.data.objects[simple]
+    
+    
 
 # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
 
@@ -189,5 +191,20 @@ second_simple = basic_simple_curve('02', p10, p11)
 
 # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
 
-single_hair(first_closed, first_simple)
-single_hair(second_closed, second_simple)
+p12 = []
+p12.append(Vector((-0.0413, -0.5441, -0.0555)))
+p12.append(Vector((0.2038, 0.3199, -0.3361)))
+p12.append(Vector((-0.4124, -1.1984, 0.8252)))
+
+p13 = []
+p13.append(Vector((-0.1608, -2.5737, -2.0292)))
+p13.append(Vector((0.9169, -3.7260, -2.9079)))
+p13.append(Vector((0.2441, -1.7120, 0.3762)))
+
+p14 = []
+p14.append(Vector((-0.5161, -0.3922, -0.3078)))
+p14.append(Vector((0.7519, 3.0676, -3.5691)))
+p14.append(Vector((-0.0321, -1.0437, 2.4477)))
+
+single_hair(first_closed, first_simple, p12, p13, p14)
+
