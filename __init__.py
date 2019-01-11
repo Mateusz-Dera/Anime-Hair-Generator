@@ -485,7 +485,7 @@ p57.append(Vector((0.6088, -0.6529, 2.3272)))
 
 single_hair(first_closed, first_simple, p55, p56, p57)
 
-# Back
+# Top
 # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
 
 p58 = []
@@ -559,4 +559,386 @@ p69.append(Vector((math.radians(125.594), math.radians(-163.046), math.radians(2
 p69.append(Vector((-0.6592, 0.1737, 2.2339)))
 
 single_hair(first_closed, first_simple, p67, p68, p69)
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
+
+p70 = []
+p70.append(Vector((0.0399, 0.5721, 0.0016)))
+p70.append(Vector((0.0399, 0.0721, 0.0016)))
+p70.append(Vector((-0.0757, -0.3066, -0.1541)))
+
+p71 = []
+p71.append(Vector((-0.4069, -1.3559, -0.2237)))
+p71.append(Vector((0.5583, -1.4849, -0.9043)))
+p71.append(Vector((0.5583, -2.4849, -0.9043)))
+
+p72 = []
+p72.append(Vector((0.6378, 0.6378, 0.6378)))
+p72.append(Vector((math.radians(127.693), math.radians(176.433), math.radians(118.042))))
+p72.append(Vector((0.5857, 0.1845, 2.3160)))
+
+single_hair(first_closed, first_simple, p70, p71, p72)
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
+
+p73 = []
+p73.append(Vector((-0.0584, 0.5504, -0.0016)))
+p73.append(Vector((-0.0584, 0.0504, -0.0016)))
+p73.append(Vector((0.0382, -0.5043, -0.0233)))
+
+p74 = []
+p74.append(Vector((-0.0158, -0.8657, -0.0351)))
+p74.append(Vector((-0.4274, -1.1583, -0.4047)))
+p74.append(Vector((1.3194, -1.4521, 0.2662)))
+
+p75 = []
+p75.append(Vector((0.7418, 0.7418, 0.7418)))
+p75.append(Vector((math.radians(-52.3081), math.radians(-4.86421), math.radians(61.23))))
+p75.append(Vector((-0.6343, 0.1727, 2.2655)))
+
+single_hair(first_closed, first_simple, p73, p74, p75)
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
+
+p76 = []
+p76.append(Vector((0.0179, 0.7227, -0.0060)))
+p76.append(Vector((0.0179, 0.2227, -0.0060)))
+p76.append(Vector((0.0179, -0.2773, -0.0060)))
+
+p77 = []
+p77.append(Vector((0.5621, -1.3456, -0.1422)))
+p77.append(Vector((1.3271, -1.0938, -0.6422)))
+p77.append(Vector((1.3271, -2.0938, -0.6422)))
+
+p78 = []
+p78.append(Vector((0.4744, 0.4744, 0.4744)))
+p78.append(Vector((math.radians(-28.6909), math.radians(-25.7711), math.radians(-77.1393))))
+p78.append(Vector((0.3204, 0.2343, 2.4867)))
+
+single_hair(first_closed, first_simple, p76, p77, p78)
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
+
+p79 = []
+p79.append(Vector((0.2477, 0.5931, 0.1384)))
+p79.append(Vector((0.2477, 0.0931, 0.1384)))
+p79.append(Vector((0.1650, -0.5895, 0.1585)))
+
+p80 = []
+p80.append(Vector((0.6707, -1.0410, 0.1259)))
+p80.append(Vector((1.3271, -1.0938, -0.6422)))
+p80.append(Vector((1.3271, -2.0938, -0.6422)))
+
+p81 = []
+p81.append(Vector((0.3589, 0.3589, 0.2752)))
+p81.append(Vector((math.radians(-28.6909), math.radians(-25.7711), math.radians(-77.1393))))
+p81.append(Vector((0.1076, 0.2602, 2.4742)))
+
+single_hair(first_closed, first_simple, p79, p80, p81)
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
+
+p82 = []
+p82.append(Vector((-0.0169, 0.7968, 0.0394)))
+p82.append(Vector((-0.0169, 0.2968, 0.0394)))
+p82.append(Vector((-0.0450, -0.2655, 0.0333)))
+
+p83 = []
+p83.append(Vector((0.0680, -1.0651, -0.3358)))
+p83.append(Vector((-0.2387, -1.7746, -0.2253)))
+p83.append(Vector((-0.3576, -2.9463, -0.3042)))
+
+p84 = []
+p84.append(Vector((0.3639, 0.3639, 0.3639)))
+p84.append(Vector((math.radians(-41.7185), math.radians(-6.19113), math.radians(2.36108))))
+p84.append(Vector((-0.1130, 0.4707, 2.3673)))
+
+
+single_hair(second_closed, second_simple, p82, p83, p84)
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
+
+p85 = []
+p85.append(Vector((0.2515, 0.3951, 0.0131)))
+p85.append(Vector((0.2515, -0.1049, 0.0131)))
+p85.append(Vector((-0.0841, -0.1831, 0.0262)))
+
+p86 = []
+p86.append(Vector((-0.6717, -1.1148, 0.1115)))
+p86.append(Vector((0.3786, -1.3403, -0.5713)))
+p86.append(Vector((0.3786, -2.3403, -0.5713)))
+
+p87 = []
+p87.append(Vector((0.4816, 0.4816, 0.4816)))
+p87.append(Vector((math.radians(-29.9292), math.radians(50.0279), math.radians(-238.884))))
+p87.append(Vector((-0.5941, 0.0395, 2.3116)))
+
+single_hair(first_closed, first_simple, p85, p86, p87)
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
+
+p88 = []
+p88.append(Vector((-0.1736, 0.6661, 0.1286)))
+p88.append(Vector((-0.1736, 0.1661, 0.1286)))
+p88.append(Vector((0.2300, 0.0189, 0.1193)))
+
+p89 = []
+p89.append(Vector((-0.0230, -1.0143, 0.2591)))
+p89.append(Vector((-0.7577, -1.2598, -0.1616)))
+p89.append(Vector((-0.7577, -2.2598, -0.1616)))
+
+p90 = []
+p90.append(Vector((0.3959, 0.3959, 0.3959)))
+p90.append(Vector((math.radians(6.36155), math.radians(-31.6429), math.radians(-114.103))))
+p90.append(Vector((0.1421, 0.1915, 2.5316)))
+
+single_hair(first_closed, first_simple, p88, p89, p90)
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
+
+p91 = []
+p91.append(Vector((0.0615, 0.5667, 0.0008)))
+p91.append(Vector((0.0615, 0.0667, 0.0008)))
+p91.append(Vector((-0.2007, -0.2789, -0.1055)))
+
+p92 = []
+p92.append(Vector((-0.5017, -1.2215, -0.0277)))
+p92.append(Vector((0.5345, -1.2462, -0.5975)))
+p92.append(Vector((0.5345, -2.2462, -0.5975)))
+
+p93 = []
+p93.append(Vector((0.4816, 0.4816, 0.4816)))
+p93.append(Vector((math.radians(-29.9292), math.radians(50.0279), math.radians(-238.884))))
+p93.append(Vector((-0.6607, 0.1426, 2.2492)))
+
+single_hair(first_closed, first_simple, p91, p92, p93)
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
+
+p94 = []
+p94.append(Vector((-0.1531, 0.7610, -0.0070)))
+p94.append(Vector((-0.1531, 0.2610, -0.0070)))
+p94.append(Vector((0.1182, -0.1815, 0.2609)))
+
+p95 = []
+p95.append(Vector((-0.2966, -1.0732, 0.0871)))
+p95.append(Vector((-0.8517, -1.3029, -0.2766)))
+p95.append(Vector((-0.8517, -2.3029, -0.2766)))
+
+p96 = []
+p96.append(Vector((0.3959, 0.3959, 0.3959)))
+p96.append(Vector((math.radians(6.36155), math.radians(-31.6429), math.radians(-114.103))))
+p96.append(Vector((0.1909, 0.2390, 2.5163)))
+
+single_hair(first_closed, first_simple, p94, p95, p96)
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
+
+p97 = []
+p97.append(Vector((-0.1201, 0.4703, 0.0028)))
+p97.append(Vector((-0.1201, -0.0297, 0.0028)))
+p97.append(Vector((-0.0266, -1.0782, -0.1937)))
+
+p98 = []
+p98.append(Vector((-0.9290, -2.0856, -0.4948)))
+p98.append(Vector((-1.6136, -0.9386, -1.5717)))
+p98.append(Vector((-5.7472, -3.0651, -0.1708)))
+
+p99 = []
+p99.append(Vector((0.4437, 0.4437, 0.4437)))
+p99.append(Vector((math.radians(-52.8239), math.radians(-22.8763), math.radians(-84.4569))))
+p99.append(Vector((0.6686, 0.1220, 2.2496)))
+
+single_hair(first_closed, first_simple, p97, p98, p99)
+
+# Back left
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
+
+p101 = []
+p101.append(Vector((0.0271, 0.5293, -0.0573)))
+p101.append(Vector((0.0271, 0.0293, -0.0573)))
+p101.append(Vector((-0.0563, -0.6468, 0.0728)))
+
+p102 = []
+p102.append(Vector((-0.1209, -1.3892, -0.1598)))
+p102.append(Vector((-0.3842, -2.1772, -0.7909)))
+p102.append(Vector((-0.3842, -3.1772, -0.7909)))
+
+p103 = []
+p103.append(Vector((-0.7272, -0.4593, -0.5404)))
+p103.append(Vector((math.radians(-214.872), math.radians(59.2613), math.radians(-20.1133))))
+p103.append(Vector((0.6479, 0.1917, 2.2666)))
+
+single_hair(first_closed, first_simple, p101, p102, p103)
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
+
+p104 = []
+p104.append(Vector((0.0188, 0.5111, -0.0453)))
+p104.append(Vector((0.0188, 0.0111, -0.0453)))
+p104.append(Vector((-0.0645, -0.6650, 0.0848)))
+
+p105 = []
+p105.append(Vector((-0.1277, -1.4113, -0.1295)))
+p105.append(Vector((-0.4092, -2.2100, -0.7169)))
+p105.append(Vector((-0.4092, -3.2100, -0.7169)))
+
+p106 = []
+p106.append(Vector((-0.6489, -0.4099, -0.4822)))
+p106.append(Vector((math.radians(-188.568), math.radians(66.54), math.radians(-348.9))))
+p106.append(Vector((0.6479, 0.1917, 2.2666)))
+
+single_hair(first_closed, first_simple, p104, p105, p106)
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
+
+p107 = []
+p107.append(Vector((0.0188, 0.5111, -0.0453)))
+p107.append(Vector((0.0188, 0.0111, -0.0453)))
+p107.append(Vector((-0.0645, -0.6650, 0.0848)))
+
+p108 = []
+p108.append(Vector((-0.1587, -1.4075, -0.1862)))
+p108.append(Vector((-0.4401, -2.2062, -0.7736)))
+p108.append(Vector((-0.4401, -3.2062, -0.7736)))
+
+p109 = []
+p109.append(Vector((-0.7609, -0.4099, -0.4822)))
+p109.append(Vector((math.radians(-162.072), math.radians(61.5077), math.radians(-320.593))))
+p109.append(Vector((0.6479, 0.1917, 2.2666)))
+
+single_hair(first_closed, first_simple, p107, p108, p109)
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
+
+p110 = []
+p110.append(Vector((0.0000, 0.5000, 0.0000)))
+p110.append(Vector((0.0000, 0.0000, 0.0000)))
+p110.append(Vector((-0.2271, -0.6299, 0.1434)))
+
+p111 = []
+p111.append(Vector((0.1426, -1.2316, -0.1622)))
+p111.append(Vector((-0.4527, -2.1513, -0.8559)))
+p111.append(Vector((-0.4527, -3.1513, -0.8559)))
+
+p112 = []
+p112.append(Vector((-0.5825, -0.5825, -0.5825)))
+p112.append(Vector((math.radians(-303.22), math.radians(133.817), math.radians(-96.2162))))
+p112.append(Vector((0.6207, 0.1853, 2.2795)))
+
+single_hair(first_closed, first_simple, p110, p111, p112)
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
+
+p113 = []
+p113.append(Vector((0.2015, 0.3595, -0.0181)))
+p113.append(Vector((0.2015, -0.1405, -0.0181)))
+p113.append(Vector((-0.3121, -1.0408, -0.0157)))
+
+p114 = []
+p114.append(Vector((0.4206, -1.9544, -1.1306)))
+p114.append(Vector((0.0685, -1.5726, -1.1710)))
+p114.append(Vector((-0.3684, -0.7984, -1.0950)))
+
+p115 = []
+p115.append(Vector((-0.5879, -0.5194, -0.5279)))
+p115.append(Vector((math.radians(47.1674), math.radians(-212.421), math.radians(-84.787))))
+p115.append(Vector((0.5662, 0.3122, 2.2689)))
+
+single_hair(first_closed, first_simple, p113, p114, p115)
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
+
+p116 = []
+p116.append(Vector((0.0770, 0.4525, -0.0348)))
+p116.append(Vector((0.0770, -0.0475, -0.0348)))
+p116.append(Vector((0.6716, -0.5717, -0.1215)))
+
+p117 = []
+p117.append(Vector((-0.4190, -0.7572, -0.5550)))
+p117.append(Vector((0.4346, -1.2668, -1.0000)))
+p117.append(Vector((10.9781, 5.2940, -14.3218)))
+
+p118 = []
+p118.append(Vector((0.8951, 0.8951, 0.8951)))
+p118.append(Vector((math.radians(-310.035), math.radians(18.4344), math.radians(100.412))))
+p118.append(Vector((0.6239, 0.1323, 2.3552)))
+
+
+single_hair(first_closed, first_simple, p116, p117, p118)
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
+
+p119 = []
+p119.append(Vector((-0.9452, 0.2600, -0.3112)))
+p119.append(Vector((0.1250, -0.1273, -0.0112)))
+p119.append(Vector((0.8745, -0.2881, -0.0271)))
+
+p120 = []
+p120.append(Vector((0.1562, -0.9987, -0.7864)))
+p120.append(Vector((0.5462, -1.1581, -1.0067)))
+p120.append(Vector((-8.0963, 41.2850, -13.9451)))
+
+p121 = []
+p121.append(Vector((0.8951, 0.8951, 0.8951)))
+p121.append(Vector((math.radians(-315.056), math.radians(15.257), math.radians(96.7963))))
+p121.append(Vector((0.5566, 0.0782, 2.3976)))
+
+single_hair(first_closed, first_simple, p119, p120, p121)
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
+
+p122 = []
+p122.append(Vector((-1.1233, 0.3495, -0.3047)))
+p122.append(Vector((-0.0531, -0.0379, -0.0047)))
+p122.append(Vector((0.7517, -0.1389, 0.1370)))
+
+p123 = []
+p123.append(Vector((0.4577, -0.6591, -0.4163)))
+p123.append(Vector((0.6297, -1.1172, -0.7693)))
+p123.append(Vector((-8.0128, 41.3258, -13.7077)))
+
+p124 = []
+p124.append(Vector((0.8951, 0.7366, 0.8951)))
+p124.append(Vector((math.radians(-310.035), math.radians(18.4344), math.radians(100.412))))
+p124.append(Vector((0.5896, 0.2154, 2.2944)))
+
+single_hair(first_closed, first_simple, p122, p123, p124)
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
+
+p125 = []
+p125.append(Vector((-1.1779, 0.3219, -0.3197)))
+p125.append(Vector((-0.1077, -0.0655, -0.0197)))
+p125.append(Vector((0.7833, 0.3214, 0.0989)))
+
+p126 = []
+p126.append(Vector((0.6906, -0.5736, -0.4778)))
+p126.append(Vector((0.8869, -0.8584, -1.1703)))
+p126.append(Vector((-7.7556, 41.5846, -14.1086)))
+
+p127 = []
+p127.append(Vector((0.8871, 0.7602, 0.7422)))
+p127.append(Vector((math.radians(-310.035), math.radians(18.4344), math.radians(100.412))))
+p127.append(Vector((0.5896, 0.2154, 2.2944)))
+
+single_hair(first_closed, first_simple, p125, p126, p127)
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
+
+p128 = []
+p128.append(Vector((0.6115, 1.1673, -0.3411)))
+p128.append(Vector((-0.0588, 0.0069, -0.0027)))
+p128.append(Vector((-0.3502, -0.4498, -0.0507)))
+
+p129 = []
+p129.append(Vector((-0.3943, -0.8327, -0.2463)))
+p129.append(Vector((-1.0837, -0.0602, -0.8994)))
+p129.append(Vector((-2.4244, -2.3810, -0.2225)))
+
+p130 = []
+p130.append(Vector((1.0000, 1.0000, 1.0000)))
+p130.append(Vector((math.radians(-32.463), math.radians(-43.6753), math.radians(247.942))))
+p130.append(Vector((0.5959, 0.1431, 2.3270)))
+
+single_hair(first_closed, first_simple, p128, p129, p130)
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
+
+p131 = []
+p131.append(Vector((-0.0593, 0.4556, 0.0030)))
+p131.append(Vector((-0.0593, -0.0444, 0.0030)))
+p131.append(Vector((0.3236, -1.3809, -0.0297)))
+
+p132 = []
+p132.append(Vector((-0.6261, -0.6120, -1.0340)))
+p132.append(Vector((-1.0458, -0.5055, -1.1922)))
+p132.append(Vector((-2.0136, -3.3859, -0.4393)))
+
+p133 = []
+p133.append(Vector((0.8909, 0.8909, 0.8909)))
+p133.append(Vector((math.radians(-14.3799), math.radians(-51.0298), math.radians(-136.727))))
+p133.append(Vector((0.6121, 0.1260, 2.3174)))
+
+single_hair(first_closed, first_simple, p131, p132, p133)
 # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
