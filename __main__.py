@@ -1117,6 +1117,8 @@ class addCubeSample(bpy.types.Operator):
 
         single_hair(first_closed, first_simple, p158, p159, p160)
         # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
+        
+        return {'FINISHED'}
 
 class panel1(bpy.types.Panel):
     bl_idname = "panel.panel1"
@@ -1127,7 +1129,7 @@ class panel1(bpy.types.Panel):
     bl_category = "Anime Hair"
 
     def draw(self, context):
-        self.layout.operator("mesh.generate_hairs", icon='MESH_CUBE', text="Generate")
+        self.layout.operator(addCubeSample.bl_idname, icon='MESH_CUBE', text="Generate")
 
 def register() :
     bpy.utils.register_class(addCubeSample)
