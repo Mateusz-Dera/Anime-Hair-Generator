@@ -33,8 +33,8 @@ from mathutils import Euler, Matrix, Quaternion, Vector
 class MySettings(bpy.types.PropertyGroup):
 
     my_bool = bpy.props.BoolProperty(
-        name="Enable or Disable",
-        description="A bool property",
+        name="Front",
+        description="Additional front hairs",
         default = False
         )
         
@@ -1135,6 +1135,65 @@ class addCubeSample(bpy.types.Operator):
 
         single_hair(first_closed, first_simple, p158, p159, p160)
         # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
+        
+        # Additional front
+        # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
+        if bpy.data.scenes["Scene"].my_tool.my_bool == True:
+            
+            p161 = []
+            p161.append(Vector((0.3169, 0.0025, -0.0872)))
+            p161.append(Vector((0.1410, 0.0586, -0.0603)))
+            p161.append(Vector((-0.2409, -0.4803, 0.5225)))
+
+            p162 = []
+            p162.append(Vector((-0.4390, -2.1399, 0.0453)))
+            p162.append(Vector((1.0113, -2.4868, -1.8770)))
+            p162.append(Vector((0.0931, 0.6328, 0.0821)))
+
+            p163 = []
+            p163.append(Vector((0.1846, 0.3067, 0.3074)))
+            p163.append(Vector((math.radians(-163.656), math.radians(161.232), math.radians(-219.988))))
+            p163.append(Vector((-0.0343, -1.0126, 2.4249)))
+            
+            single_hair(first_closed, first_simple, p161, p162, p163)
+            
+            #
+        
+            p164 = []
+            p164.append(Vector((0.3169, 0.0025, -0.0872)))
+            p164.append(Vector((0.1410, 0.0586, -0.0603)))
+            p164.append(Vector((-0.0022, -0.2148, 0.2673)))
+
+            p165 = []
+            p165.append(Vector((-0.7367, -2.2122, 0.1985)))
+            p165.append(Vector((0.4327, -2.7988, -1.7309)))
+            p165.append(Vector((0.0287, 0.5718, -0.0055)))
+
+            p166 = []
+            p166.append(Vector((0.1846, 0.3067, 0.3074)))
+            p166.append(Vector((math.radians(-148.388), math.radians(180.073), math.radians(-173.015))))
+            p166.append(Vector((-0.0599, -1.0274, 2.4372)))
+
+            single_hair(first_closed, first_simple, p164, p165, p166)
+            
+            #
+            
+            p167 = []
+            p167.append(Vector((0.2491, -0.0080, 0.0340)))
+            p167.append(Vector((0.0732, 0.0481, 0.0609)))
+            p167.append(Vector((-0.3642, -0.8414, 0.3606)))
+
+            p168 = []
+            p168.append(Vector((-0.8876, -1.8752, -0.8799)))
+            p168.append(Vector((-0.0104, -1.7644, -2.9284)))
+            p168.append(Vector((-0.9286, 1.3553, -0.9692)))
+
+            p169 = []
+            p169.append(Vector((0.1846, 0.3067, 0.3074)))
+            p169.append(Vector((math.radians(-188.614), math.radians(173.54), math.radians(-73.7553))))
+            p169.append(Vector((0.2352, -1.0153, 2.4356)))
+
+            single_hair(first_closed, first_simple, p167, p168, p169)
         
         return {'FINISHED'}
 
