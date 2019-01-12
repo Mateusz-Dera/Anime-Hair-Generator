@@ -27,8 +27,26 @@ bl_info = {
 
 import bpy
 import math
-from bpy import context, data, ops
+from bpy import * #context, data, ops
 from mathutils import Euler, Matrix, Quaternion, Vector
+
+class MySettings(bpy.types.PropertyGroup):
+
+    my_bool = bpy.props.BoolProperty(
+        name="Enable or Disable",
+        description="A bool property",
+        default = False
+        )
+        
+class ToggleOperator(bpy.types.Operator):
+    bl_idname = "view3d.toggle_mybool"
+    bl_label = "Toggle My Bool"
+    bl_options = {'REGISTER', 'UNDO'}
+
+    def execute(self, context):  
+        context.scene.my_tool.my_bool = not context.scene.my_tool.my_bool
+        context.area.tag_redraw()
+        return {'FINISHED'}
 
 class addCubeSample(bpy.types.Operator):
     bl_idname = 'mesh.generate_hairs'
@@ -1129,15 +1147,25 @@ class panel1(bpy.types.Panel):
     bl_category = "Anime Hair"
 
     def draw(self, context):
+        scene = context.scene
+        mytool = scene.my_tool
+        self.layout.prop(mytool, "my_bool")
         self.layout.operator(addCubeSample.bl_idname, icon='MESH_CUBE', text="Generate")
+
+addon_keymaps = []
+
 
 def register() :
     bpy.utils.register_class(addCubeSample)
     bpy.utils.register_class(panel1)
+    bpy.utils.register_class(MySettings)
+    bpy.types.Scene.my_tool = bpy.props.PointerProperty(type=MySettings)
    
 def unregister() :
     bpy.utils.unregister_class(addCubeSample)
     bpy.utils.unregister_class(panel1)
+    bpy.utils.register_class(MySettings)
+    bpy.types.Scene.my_tool = bpy.props.PointerProperty(type=MySettings)
 
 if __name__ == "__main__" :
     register()
