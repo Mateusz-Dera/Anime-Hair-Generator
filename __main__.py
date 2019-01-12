@@ -30,7 +30,7 @@ import math
 from bpy import * #context, data, ops
 from mathutils import Euler, Matrix, Quaternion, Vector
 
-class MySettings(bpy.types.PropertyGroup):
+class X1(bpy.types.PropertyGroup):
 
     my_bool = bpy.props.BoolProperty(
         name="Front",
@@ -43,6 +43,13 @@ class X2(bpy.types.PropertyGroup):
         name="Style 1",
         description="Style 1",
         default = True
+        )
+class X3(bpy.types.PropertyGroup):
+            
+    my_bool3 = bpy.props.BoolProperty(
+        name="Style 2",
+        description="Style 2",
+        default = False
         )
         
 class ToggleOperator(bpy.types.Operator):
@@ -62,6 +69,16 @@ class ToggleOperator2(bpy.types.Operator):
 
     def execute(self, context):  
         context.scene.my_tool2.my_bool2 = not context.scene.my_tool2.my_bool2
+        context.area.tag_redraw()
+        return {'FINISHED'}
+
+class ToggleOperator3(bpy.types.Operator):
+    bl_idname = "view3d.toggle_mybool"
+    bl_label = "Toggle My Bool3"
+    bl_options = {'REGISTER', 'UNDO'}
+
+    def execute(self, context):  
+        context.scene.my_tool3.my_bool3 = not context.scene.my_tool3.my_bool3
         context.area.tag_redraw()
         return {'FINISHED'}
 
@@ -1249,7 +1266,45 @@ class addCubeSample(bpy.types.Operator):
 
             single_hair(first_closed, first_simple, p173, p174, p175)     
             
-        
+        if bpy.data.scenes["Scene"].my_tool3.my_bool3 == True:
+            
+            p176 = []
+            p176.append(Vector((-0.9164, 0.2838, -0.4204)))
+            p176.append(Vector((0.1538, -0.1035, -0.1204)))
+            p176.append(Vector((0.1894, -0.0284, 0.8390)))
+
+            p177 = []
+            p177.append(Vector((0.1879, -1.4542, -0.6031)))
+            p177.append(Vector((1.4584, -2.0513, -1.3051)))
+            p177.append(Vector((-9.9344, 19.5093, -25.8692)))
+
+            p178 = []
+            p178.append(Vector((-1.0091, -1.1157, -1.1157)))
+            p178.append(Vector((math.radians(-315.056), math.radians(-164.743), math.radians(83.2037))))
+            p178.append(Vector((-0.6218, 0.0085, 2.3546)))
+            
+            single_hair(first_closed, first_simple, p176, p177, p178)  
+                    
+            #        
+            
+            p179 = []
+            p179.append(Vector((-0.9164, 0.2838, -0.4204)))
+            p179.append(Vector((0.1538, -0.1035, -0.1204)))
+            p179.append(Vector((0.4550, -0.0032, 0.9063)))
+
+            p180 = []
+            p180.append(Vector((-0.0484, -1.6420, -0.5022)))
+            p180.append(Vector((1.4584, -2.0513, -1.3051)))
+            p180.append(Vector((-9.9344, 19.5093, -25.8692)))
+
+            p181 = []
+            p181.append(Vector((1.1874, 1.3128, 1.3128)))
+            p181.append(Vector((math.radians(-315.056), math.radians(15.257), math.radians(96.7963))))
+            p181.append(Vector((0.5566, -0.0489, 2.3976)))
+
+            single_hair(first_closed, first_simple, p179, p180, p181)  
+
+                   
         return {'FINISHED'}
 
 class panel1(bpy.types.Panel):
@@ -1264,8 +1319,10 @@ class panel1(bpy.types.Panel):
         scene = context.scene
         my_tool = scene.my_tool
         my_tool2 = scene.my_tool2
+        my_tool3 = scene.my_tool3
         self.layout.prop(my_tool, "my_bool")
         self.layout.prop(my_tool2, "my_bool2")
+        self.layout.prop(my_tool3, "my_bool3")
         self.layout.operator(addCubeSample.bl_idname, icon='MESH_CUBE', text="Generate")
 
 addon_keymaps = []
@@ -1274,17 +1331,22 @@ addon_keymaps = []
 def register() :
     bpy.utils.register_class(addCubeSample)
     bpy.utils.register_class(panel1)
-    bpy.utils.register_class(MySettings)
+    bpy.utils.register_class(X1)
     bpy.utils.register_class(X2)
-    bpy.types.Scene.my_tool = bpy.props.PointerProperty(type=MySettings)
+    bpy.utils.register_class(X3)
+    bpy.types.Scene.my_tool = bpy.props.PointerProperty(type=X1)
     bpy.types.Scene.my_tool2 = bpy.props.PointerProperty(type=X2)
+    bpy.types.Scene.my_tool3 = bpy.props.PointerProperty(type=X3)
    
 def unregister() :
     bpy.utils.unregister_class(addCubeSample)
     bpy.utils.unregister_class(panel1)
-    bpy.utils.register_class(MySettings)
-    bpy.types.Scene.my_tool = bpy.props.PointerProperty(type=MySettings)
-    bpy.types.Scene.my_tool2 = bpy.props.PointerProperty(type=MySettings2)
-    
+    bpy.utils.register_class(X1)
+    bpy.utils.register_class(X2)
+    bpy.utils.register_class(X3)
+    bpy.types.Scene.my_tool = bpy.props.PointerProperty(type=X1)
+    bpy.types.Scene.my_tool2 = bpy.props.PointerProperty(type=X2)
+    bpy.types.Scene.my_tool3 = bpy.props.PointerProperty(type=X3)
+   
 if __name__ == "__main__" :
     register()
