@@ -1137,5 +1137,5 @@ def unregister() :
     bpy.utils.unregister_class(addCubeSample)
     bpy.utils.unregister_class(panel1)
 
-if __name__ == "__init__" :
+if __name__ == "__main__" :
     register()
