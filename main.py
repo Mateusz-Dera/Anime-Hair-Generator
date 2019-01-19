@@ -20,7 +20,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>
 
 bl_info = {
-    'name': 'Creating panels demonstation',
+    'name': 'Creating anime style hairs',
     "author": "Mateusz Dera",
     'category': 'All'
 }
@@ -82,7 +82,7 @@ class ToggleOperator3(bpy.types.Operator):
         context.area.tag_redraw()
         return {'FINISHED'}
 
-class addCubeSample(bpy.types.Operator):
+class generate(bpy.types.Operator):
     bl_idname = 'mesh.generate_hairs'
     bl_label = 'Generate Hairs'
     bl_options = {"REGISTER", "UNDO"}
@@ -1327,13 +1327,12 @@ class panel1(bpy.types.Panel):
         self.layout.prop(my_tool, "my_bool")
         self.layout.prop(my_tool2, "my_bool2")
         self.layout.prop(my_tool3, "my_bool3")
-        self.layout.operator(addCubeSample.bl_idname, icon='MESH_CUBE', text="Generate")
+        self.layout.operator(generate.bl_idname, icon='MESH_CUBE', text="Generate")
 
 addon_keymaps = []
 
-
 def register() :
-    bpy.utils.register_class(addCubeSample)
+    bpy.utils.register_class(generate)
     bpy.utils.register_class(panel1)
     bpy.utils.register_class(X1)
     bpy.utils.register_class(X2)
@@ -1343,7 +1342,7 @@ def register() :
     bpy.types.Scene.my_tool3 = bpy.props.PointerProperty(type=X3)
    
 def unregister() :
-    bpy.utils.unregister_class(addCubeSample)
+    bpy.utils.unregister_class(generate)
     bpy.utils.unregister_class(panel1)
     bpy.utils.register_class(X1)
     bpy.utils.register_class(X2)
