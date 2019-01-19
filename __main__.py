@@ -165,6 +165,10 @@ class addCubeSample(bpy.types.Operator):
                 bez_point.handle_left_type = 'FREE'
                 bez_point.handle_right_type = 'FREE'   
 
+            mat = bpy.data.materials.new("PKHG")
+            mat.diffuse_color = (float(.5),0.0,1.0)
+            curve.active_material = mat
+
             # First point.
             bez_points[0].co = p0[1]
             bez_points[0].handle_left = p0[0]
